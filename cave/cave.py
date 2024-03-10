@@ -1,5 +1,6 @@
 import sys
 from random import randint
+
 import pygame
 from pygame.locals import QUIT, Rect, KEYDOWN, K_SPACE, K_RETURN
 

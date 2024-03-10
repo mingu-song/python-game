@@ -1,6 +1,7 @@
 import sys
 from math import floor
 from random import randint
+
 import pygame
 from pygame.locals import QUIT, MOUSEBUTTONDOWN, KEYDOWN, K_RETURN
 
