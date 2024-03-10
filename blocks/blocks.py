@@ -1,6 +1,7 @@
-import sys
 import math
 import random
+import sys
+
 import pygame
 from pygame.locals import QUIT, KEYDOWN, K_LEFT, K_RIGHT, Rect
 
@@ -32,12 +33,11 @@ def tick():
         elif event.type == KEYDOWN:
             if event.key == K_LEFT:
                 PADDLE.rect.centerx -= 2
-                if PADDLE.rect.centerx < 0:
-                    PADDLE.rect.centerx = 0
+                PADDLE.rect.centerx = max(0, PADDLE.rect.centerx)
             elif event.key == K_RIGHT:
                 PADDLE.rect.centerx += 2
-                if PADDLE.rect.centerx > 600:
-                    PADDLE.rect.centerx = 600
+                PADDLE.rect.centerx = min(600, PADDLE.rect.centerx)
+
     if BALL.rect.centery < 1000:
         BALL.move()
 
