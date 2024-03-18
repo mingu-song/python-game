@@ -90,7 +90,7 @@ def main():
             game_over = snake.move(key)
 
         paint(snake, message)
-        FPSCLOCK.tick(5)
+        FPSCLOCK.tick(2)
 
 
 if __name__ == '__main__':
